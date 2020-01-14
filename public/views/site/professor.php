@@ -23,9 +23,7 @@ global $errors;
     <?php } ?>
 
     <form action="" method="post">
-        <input type="text" name="group_number" placeholder="Номер группы"/>
-        <input type="text" name="type" placeholder="Тип занятия"/>
-        <input type="text" name="length" placeholder="Количество пар"/>
+        <input type="text" name="professor" placeholder="Имя преподавателя"/>
         <input type="text" name="subject" placeholder="Предмет"/>
 
         <button type="submit" class="btn" name="send_data">Отправить данные</button>

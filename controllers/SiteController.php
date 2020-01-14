@@ -41,6 +41,26 @@ class SiteController {
         require_once(__DIR__ . '/../public/views/site/index.php');
     }
 
+    public function actionProfessor() {
+        global $errors;
+        $errors = [];
+        if (isset($_POST['send_data'])) {
+            try {
+                $a = $this->model->addProfessorInfo($_POST['professor'], $_POST['subject']);
+                if (!$a) {
+                    throw new Exception('Не удалось записать информацию в базу professors.');
+                }
+
+                header('Location: /');
+                die;
+            } catch (Exception $Ex) {
+                $errors[] = $Ex->getMessage();
+            }
+        }
+
+        require_once(__DIR__ . '/../public/views/site/professor.php');
+    }
+
     public function actionReset() {
         if ($this->model->resetAll()) {
             echo "reset ok";
