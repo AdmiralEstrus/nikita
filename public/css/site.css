@@ -1,0 +1,41 @@
+.container {
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 400%;
+}
+
+.btn {
+    border: none;
+    padding: 16px 32px;
+    background-color: #008CBA;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 250px;
+}
+
+.btn:hover {
+    background-color: #00ACCA;
+}
+
+input {
+    width: 250px;
+    height: 40px;
+    display: block;
+    border: 1px solid black;
+    margin: 10px auto 0;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.errors {
+    color: red;
+}
